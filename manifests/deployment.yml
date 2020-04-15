@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: bougyzpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bougyzpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: bougyzpipelinesjavascriptdocker 
+          image: cicdconreg.azurecr.io/bougyzpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
